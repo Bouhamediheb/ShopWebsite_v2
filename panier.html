@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>BouhaShop | eCommerce Web Exercice </title>
+	<meta charset="UTF-8">
+	<meta name="description" content=" BouhaShop | eCommerce Web Exercice">
+	<meta name="keywords" content="BouhaShop | eCommerce Web Exercice">
+	<!-- Responsive Bootstrap-->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- Favicon -->
+	<link href="img/favicon.ico" rel="shortcut icon"/>
+    <!-- Style CSS Panier -->
+    
+	<!-- Google Font -->
+	<link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,300i,400,400i,700,700i" rel="stylesheet">
+
+
+	<!-- Stylesheets -->
+	<link rel="stylesheet" href="css/bootstrap.min.css"/>
+	<link rel="stylesheet" href="css/font-awesome.min.css"/>
+	<link rel="stylesheet" href="css/flaticon.css"/>
+	<link rel="stylesheet" href="css/slicknav.min.css"/>
+	<link rel="stylesheet" href="css/jquery-ui.min.css"/>
+	<link rel="stylesheet" href="css/owl.carousel.min.css"/>
+	<link rel="stylesheet" href="css/animate.css"/>
+	<link rel="stylesheet" href="css/style.css"/>
+
+
+
+
+</head>
+<body>
+	<!-- Header section -->
+	<header class="header-section">
+		<div class="header-top">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-2 text-center text-lg-left">
+						<!-- logo -->
+						<a href="./home.html" class="site-logo">
+							<img src="img/logo.png" alt="">
+						</a>
+					</div>
+					<div class="col-xl-6 col-lg-5">
+						<form class="header-search-form">
+							<input type="text" placeholder="Search on BouhaShop ....">
+							<button><i class="flaticon-search"></i></button>
+						</form>
+					</div>
+					<div class="col-xl-4 col-lg-6">
+						<div class="user-panel">
+							<div class="up-item">
+								<i class="flaticon-profile"></i>
+								<a href="#/">Identifiez</a>  ou <a href="#/">Creer un compte</a>
+							</div>
+							<div class="up-item">
+								<div class="shopping-card">
+									<i class="flaticon-bag"></i>
+									<span id="cartCount">0</span>
+								</div>
+								<a href="panier.html">Votre Panier</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	<nav class="main-navbar">
+			<div class="container">
+				<!-- menu -->
+				<ul class="main-menu">
+					<li><a href="#/">Acceuil</a></li>
+					<li><a href="femme.html">Femme</a></li>
+					<li><a href="homme.html">Homme</a></li>
+					<li><a href="enfant.html">Enfant</a></li>
+						
+					
+					<li><a href="#/">Chaussures</a>
+						<ul class="sub-menu">
+							<li><a href="#/">Espadries</a></li>
+							<li><a href="#/">Sandals</a></li>
+							<li><a href="#/">Bottes</a></li>
+							
+						</ul>
+					</li>
+					<li><a href="#/">Aide Shopping !</a>
+						<ul class="sub-menu">
+							<li><a href="./categorie.html">Recherche Par Détaillée </a></li>
+						</ul>
+					</li>
+					<li><a href="./contact.html">Contact</a></li>
+				</ul>
+			</div>
+		</nav>
+	</header>
+	<!-- Header section fin -->
+
+    <!-- Page info debut-->
+	<div class="page-top-info">
+		<div class="container">
+			<h4>VOTRE PANIER</h4>
+			<div class="site-pagination">
+				<a href="index.html">Acceuil</a> / 
+				<a href="./panier.html">Panier</a> 
+			</div>
+		</div>
+	</div>
+	<!-- Page info fin -->
+
+    <!-- Panier  Debut -->
+    <div class="container-fluid mt-5">
+        <h2 class="mb-5 text-center">Votre Panier</h2>
+        <div class="row justify-content-center">
+           <div class="col-md-8">
+              <div class="table-responsive">
+                 <table id="myTable" class="table">
+                    <thead>
+                       <tr>
+                          <th>Produit</th>
+                          <th>Nom</th>
+                          <th>Quantité</th>
+                          <th>Prix Unitaire</th>
+                          <th class="text-right">
+                             <span id="amount" class="amount">Total Par Produit</span>
+                          </th>
+                       </tr>
+                    </thead>
+                    <tbody>
+                       <tr>
+                          <td>
+                             <div class="product-img">
+                                <div class="img-prdct">
+                                   <img src="./img/product/1.jpg" width="100" height="150">
+                                </div>
+                             </div>
+                          </td>
+                          <td>
+                             <p>Top Femme col en V </p>
+                          </td>
+                          <td>
+                             <div class="button-container">
+                                <input type="number" name="qty" min="0" class="qty form-control" value="0" onkeypress="return (event.charCode == 8 || event.charCode == 0) ? null : event.charCode >= 48 && event.charCode <= 57"/>
+                             </div>
+                          </td>
+                          <td>
+                             <input type="text" value="40" class="price form-control" disabled>
+                          </td>
+                          <td align="center"> <span id="amount" class="amount">0</span> <span class="amout">DT</span>
+                          </td>
+                       </tr>
+                       <tr>
+                        <td>
+                           <div class="product-img">
+                              <div class="img-prdct">
+                                <img src="./img/product/3.jpg" width="100" height="150">
+                              </div>
+                           </div>
+                        </td>
+                        <td>
+                           <p>Top Femme col en V </p>
+                        </td>
+                        <td>
+                           <div class="button-container">
+                              <input type="number" name="qty" min="0" class="qty form-control" value="0" onkeypress="return (event.charCode == 8 || event.charCode == 0) ? null : event.charCode >= 48 && event.charCode <= 57"/>
+                           </div>
+                        </td>
+                        <td>
+                           <input type="text" value="40" class="price form-control" disabled>
+                        </td>
+                        <td align="center"> <span id="amount" class="amount">0</span> <span class="amout">DT</span>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td>
+                           <div class="product-img">
+                              <div class="img-prdct">
+                                <img src="./img/product/4.jpg" width="100" height="150">
+                              </div>
+                           </div>
+                        </td>
+                        <td>
+                           <p>T-Short Homme Vegeta</p>
+                        </td>
+                        <td>
+                           <div class="button-container">
+                              <input type="number" name="qty" min="0" class="qty form-control" value="0" onkeypress="return (event.charCode == 8 || event.charCode == 0) ? null : event.charCode >= 48 && event.charCode <= 57"/>
+                           </div>
+                        </td>
+                        <td>
+                           <input type="text" value="35" class="price form-control" disabled>
+                        </td>
+                        <td align="center"> <span id="amount" class="amount">0</span> <span class="amout">DT</span>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td>
+                           <div class="product-img">
+                              <div class="img-prdct">
+                                <img src="./img/product/5.jpg" width="100" height="150"> 
+                              </div>
+                           </div>
+                        </td>
+                        <td>
+                           <p>Pull Homme OpenMinded</p>
+                        </td>
+                        <td>
+                           <div class="button-container">
+                              <input type="number" name="qty" min="0" class="qty form-control" value="0" onkeypress="return (event.charCode == 8 || event.charCode == 0) ? null : event.charCode >= 48 && event.charCode <= 57"/>
+                           </div>
+                        </td>
+                        <td>
+                           <input type="text" value="30" class="price form-control" disabled>
+                        </td>
+                        <td align="center"> <span id="amount" class="amount">0</span> <span class="amout">DT</span>
+                        </td>
+                     </tr>
+                       <!-- Pour Ajouter autre article  -->
+                       <!-- Placer le code ici -->
+                       <!-- add more tr  -->
+                    </tbody>
+                    <tfoot>
+                       <tr>
+                          <td colspan="4">  <input type="submit" value="VALIDER VOS ACHAT!"> </td>
+                          <td align="center"
+                             <strong>TOTAL = <span id="total" class="total">0</span><strong> DT</strong>
+                             </strong>
+                          </td>
+                       </tr>
+                    </tfoot>
+                 </table>
+              </div>
+           </div>
+        </div>
+     </div>
+     
+
+	<!-- Footer section -->
+	<section class="footer-section">
+		<div class="container">
+			
+			<div class="row">
+				<div class="col-lg-3 col-sm-6">
+					<div class="footer-widget about-widget">
+						<h2>PAIEMENT</h2>
+						<p>Notre Platforme présente un systéme de paiement en ligne  a travers votre carte bancaire tunisienne d'une maniére sécurisée . </p>
+						<img src="img/cards.png" alt="">
+					</div>
+				</div>
+				<div class="col-lg-3 col-sm-6">
+					<div class="footer-widget about-widget">
+						<h2>Questions</h2>
+						<ul>
+							<li><a href="">Qui Sommes-nous ?</a></li>
+							<li><a href="">Suivis Colis</a></li>
+							<li><a href="">Retour Marchandises</a></li>
+							<li><a href="">Postuler Pour un travail ?</a></li>
+							<li><a href="">Livraison</a></li>
+							<li><a href="">Nos Partenaires </a></li>
+						</ul>
+						
+					</div>
+				</div>
+				<div class="col-lg-3 col-sm-6">
+					<div class="footer-widget about-widget">
+						<h2>Articles Fashion 2021</h2>
+						<div class="fw-latest-post-widget">
+							<div class="lp-item">
+								<div class="lp-thumb set-bg" data-setbg="img/blog-thumbs/1.jpg"></div>
+								<div class="lp-content">
+									<h6>Que Porter avec mon mask(Covid19) ?</h6>
+									<span>4/11/2021</span>
+									<a href="#/" class="readmore">Lire la suite</a>
+								</div>
+							</div>
+							<div class="lp-item">
+								<div class="lp-thumb set-bg" data-setbg="img/blog-thumbs/2.jpg"></div>
+								<div class="lp-content">
+									<h6>Populaire Cet Année</h6>
+									<span>4/11/2021</span>
+									<a href="#/" class="readmore">Lire la suite</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-3 col-sm-6">
+					<div class="footer-widget contact-widget">
+						<h2>Informations Utiles</h2>
+						<div class="con-info">
+							<span>Sociéte.</span>
+							<p>BouhaShop - IIT SFAX  </p>
+						</div>
+						<div class="con-info">
+							<span>Addresse</span>
+							<p>Route Sokra KM 1 , 3052 </p>
+						</div>
+						<div class="con-info">
+							<span>Téléphone.</span>
+							<p>+00216 29512432</p>
+						</div>
+						<div class="con-info">
+							<span>Email.</span>
+							<p>ihebbouhamediit@gmail.com</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	<!-- Font Awesome Uses Here ( As the teacher mention to use them) -->
+		<div class="social-links-warp">
+			<div class="container">
+			<center>
+				<div class="social-links">
+					<a href="" class="instagram"><i class="fa fa-instagram"></i><span>instagram</span></a>
+					<a href="" class="facebook"><i class="fa fa-facebook"></i><span>facebook</span></a>
+					<a href="" class="twitter"><i class="fa fa-twitter"></i><span>twitter</span></a>
+					<a href="" class="youtube"><i class="fa fa-youtube"></i><span>youtube</span></a>
+				</div>
+			</center>
+
+	<!-- Copyright With JS to keep using always current year /2021  -->
+<p class="text-white text-center mt-5">Copyright &copy; <script>document.write(new Date().getFullYear());</script> All rights reserved | BouhaShop &copy; <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://www.facebook.com/iheb.bouhamed.359/" target="_blank">Bouhamed Iheb - IIT SFAX</a></p>
+
+
+			</div>
+		</div>
+	</section>
+	<!-- Footer section end -->
+
+     <script src='https://code.jquery.com/jquery-3.4.1.min.js'></script>
+     <script src='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js'></script>
+     <script  src="./js/script.js"></script>
+	 <script src="js/script.js"></script>	 
+</body>
+
+
+
+</html>
+    

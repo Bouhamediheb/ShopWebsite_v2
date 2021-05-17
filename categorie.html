@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<title>Aide  - BouhaShop | eCommerce Web Exercice </title>
+	<meta charset="UTF-8">
+	<meta name="description" content=" BouhaShop | eCommerce Web Exercice">
+	<meta name="keywords" content="BouhaShop | eCommerce Web Exercice">
+	<!-- Responsive Bootstrap-->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- Favicon -->
+	<link href="img/favicon.ico" rel="shortcut icon"/>    
+	<!-- Google Font -->
+	<link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,300i,400,400i,700,700i" rel="stylesheet">
+
+
+	<!-- Stylesheets -->
+	<link rel="stylesheet" href="css/bootstrap.min.css"/>
+	<link rel="stylesheet" href="css/font-awesome.min.css"/>
+	<link rel="stylesheet" href="css/flaticon.css"/>
+	<link rel="stylesheet" href="css/slicknav.min.css"/>
+	<link rel="stylesheet" href="css/jquery-ui.min.css"/>
+	<link rel="stylesheet" href="css/owl.carousel.min.css"/>
+	<link rel="stylesheet" href="css/animate.css"/>
+	<link rel="stylesheet" href="css/style.css"/>
+
+
+
+
+</head>
+<body onload="alert('les buttons de cette page ne font rien!')">
+	<!-- Header Debut -->
+	<header class="header-section">
+		<div class="header-top">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-2 text-center text-lg-left">
+						<!-- logo -->
+						<a href="./home.html" class="site-logo">
+							<img src="img/logo.png" alt="">
+						</a>
+					</div>
+					<div class="col-xl-6 col-lg-5">
+						<form class="header-search-form">
+							<input type="text" placeholder="Search on BouhaShop ....">
+							<button><i class="flaticon-search"></i></button>
+						</form>
+					</div>
+					<div class="col-xl-4 col-lg-6">
+						<div class="user-panel">
+							<div class="up-item">
+								<i class="flaticon-profile"></i>
+								<a href="Login.html">Identifiez</a>  ou <a href="Login.html">Creer un compte</a>
+							</div>
+							<div class="up-item">
+								<div class="shopping-card">
+									<i class="flaticon-bag"></i>
+									<span id="cartCount">0</span>
+								</div>
+								<a href="panierjs.html">Votre Panier</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+	<!-- Header Fin -->
+		<nav class="main-navbar">
+			<div class="container">
+				<!-- Menu  -->
+				<ul class="main-menu">
+					<li><a href="index.html">Acceuil</a></li>
+					<li><a href="femme.html">Femme</a></li>
+					<li><a href="homme.html">Homme</a></li>
+					<li><a href="" onclick="alert('En cours !!')">Enfant</a></li>
+					<li><a href="#/">Chaussures</a>
+						<ul class="sub-menu">
+							<li><a href="#/" onclick="alert('En cours !!')" >Espadries</a></li>
+							<li><a href="#/" onclick="alert('En cours !!')" >Sandals</a></li>
+							<li><a href="#/" onclick="alert('En cours !!')">Bottes</a></li>
+							
+						</ul>
+					</li>
+					<li><a href="#/">Aide Shopping !</a>
+						<ul class="sub-menu">
+							<li><a href="categorie.html">Recherche Détaillée </a></li>
+						</ul>
+					</li>
+					<li><a href="contact.html">Contact</a></li>
+				</ul>
+			</div>
+		</nav>
+	
+	
+
+
+
+	<!-- Page info début -->
+	<div class="page-top-info">
+		<div class="container">
+			<h4>Recherche Avancée</h4>
+			<div class="site-pagination">
+				<a href="index.html">Acceuil</a> /
+				<a href="categorie.html">Recherche</a> 
+			</div>
+		</div>
+	</div>
+	<!-- Page info fin -->
+
+
+	<!-- Categorie Début -->
+	<section class="category-section spad">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-3 order-2 order-lg-1">
+					<div class="filter-widget">
+						<h2 class="fw-title">Par Categories</h2>
+						<ul class="category-menu">
+							<li><a href="#/">Vêtements Femmes</a>
+								<ul class="sub-menu">
+									<li><a href="#/">Jupes <span>(12)</span></a></li>
+									<li><a href="#/">Robe<span>(56)</span></a></li>
+									<li><a href="#/">Pantalons<span>(36)</span></a></li>
+								</ul>
+							</li>
+							<li><a href="#/">Vêtements Hommes</a>
+								<ul class="sub-menu">
+									<li><a href="#/">Chemises <span>(20)</span></a></li>
+									<li><a href="#/">Pantalons<span>(33)</span></a></li>
+									<li><a href="#/">Vestes<span>(10)</span></a></li>
+								</ul></li>
+							<li><a href="#/" onclick="alert('En cours')">Enfants</a></li>
+							
+						</ul>
+					</div>
+					<div class="filter-widget mb-0">
+						<h2 class="fw-title">Par Prix</h2>
+						<div class="price-range-wrap">
+							<h4>Votre Budget</h4>
+                            <div class="price-range ui-slider ui-corner-all ui-slider-horizontal ui-widget ui-widget-content" data-min="30" data-max="500">
+								<div class="ui-slider-range ui-corner-all ui-widget-header" style="left: 0%; width: 100%;"></div>
+								<span tabindex="0" class="ui-slider-handle ui-corner-all ui-state-default" style="left: 0%;">
+								</span>
+								<span tabindex="0" class="ui-slider-handle ui-corner-all ui-state-default" style="left: 100%;">
+								</span>
+							</div>
+							<div class="range-slider">
+                                <div class="price-input">
+                                    <input type="text" id="minamount">
+                                    <input type="text" id="maxamount">
+                                </div>
+                            </div>
+                        </div>
+					</div>
+					<div class="filter-widget mb-0">
+						<h2 class="fw-title">Par Couleur</h2>
+						<div class="fw-color-choose">
+							<div class="cs-item">
+								<input type="radio" name="cs" id="gray-color">
+								<label class="cs-gray" for="gray-color">
+									<span>(3)</span>
+								</label>
+							</div>
+							<div class="cs-item">
+								<input type="radio" name="cs" id="orange-color">
+								<label class="cs-orange" for="orange-color">
+									<span>(25)</span>
+								</label>
+							</div>
+							<div class="cs-item">
+								<input type="radio" name="cs" id="yellow-color">
+								<label class="cs-yellow" for="yellow-color">
+									<span>(112)</span>
+								</label>
+							</div>
+							<div class="cs-item">
+								<input type="radio" name="cs" id="black-color">
+								<label class="cs-black" for="black-color">
+									<span>(75)</span>
+								</label>
+							</div>
+							<div class="cs-item">
+								<input type="radio" name="cs" id="purple-color">
+								<label class="cs-purple" for="purple-color">
+									<span>(9)</span>
+								</label>
+							</div>
+							<div class="cs-item">
+								<input type="radio" name="cs" id="blue-color" checked="">
+								<label class="cs-blue" for="blue-color">
+									<span>(29)</span>
+								</label>
+							</div>
+						</div>
+					</div>
+					<div class="filter-widget mb-0">
+						<h2 class="fw-title">Taille</h2>
+						<div class="fw-size-choose">
+							<div class="sc-item">
+								<input type="radio" name="sc" id="xs-size">
+								<label for="xs-size">XS</label>
+							</div>
+							<div class="sc-item">
+								<input type="radio" name="sc" id="s-size">
+								<label for="s-size">S</label>
+							</div>
+							<div class="sc-item">
+								<input type="radio" name="sc" id="m-size"  checked="">
+								<label for="m-size">M</label>
+							</div>
+							<div class="sc-item">
+								<input type="radio" name="sc" id="l-size">
+								<label for="l-size">L</label>
+							</div>
+							<div class="sc-item">
+								<input type="radio" name="sc" id="xl-size">
+								<label for="xl-size">XL</label>
+							</div>
+							<div class="sc-item">
+								<input type="radio" name="sc" id="xxl-size">
+								<label for="xxl-size">XXL</label>
+							</div>
+						</div>
+					</div>
+					
+				</div>
+
+				<div class="col-lg-9  order-1 order-lg-2 mb-5 mb-lg-0">
+					<div class="row">
+						<div class="col-lg-4 col-sm-6">
+							<div class="product-item">
+								<div class="pi-pic">
+									<div class="tag-sale">PROMO!</div>
+									<img src="./img/product/1.jpg" alt="">
+									<div class="pi-links">
+										<a href="#/" class="add-card"><i class="flaticon-bag"></i><span onclick="addtoCartNumber()">AJOUTER AU PANIER</span></a>
+										<a href="#/" class="wishlist-btn"><i class="flaticon-heart"></i></a>
+									</div>
+								</div>
+								<div class="pi-text">
+									<h6>35,000Dt</h6>
+									<p>Top femme col en V </p>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-4 col-sm-6">
+							<div class="product-item">
+								<div class="pi-pic">
+									<img src="./img/product/2.jpg" alt="">
+									<div class="pi-links">
+										<a href="#/" class="add-card"><i class="flaticon-bag"></i><span onclick="addtoCartNumber()">AJOUTER AU PANIER</span></a>
+										<a href="#/" class="wishlist-btn"><i class="flaticon-heart"></i></a>
+									</div>
+								</div>
+								<div class="pi-text">
+									<h6>30,000Dt</h6>
+									<p>Robe courte à encolure en V</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-4 col-sm-6">
+							<div class="product-item">
+								<div class="pi-pic">
+									<img src="./img/product/3.jpg" alt="">
+									<div class="pi-links">
+										<a href="#/" class="add-card"><i class="flaticon-bag"></i><span onclick="addtoCartNumber()">AJOUTER AU PANIER</span></a>
+										<a href="#/" class="wishlist-btn"><i class="flaticon-heart"></i></a>
+									</div>
+								</div>
+								<div class="pi-text">
+									<h6>39,000Dt</h6>
+									<p>Top femme col en V  </p>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-4 col-sm-6">
+							<div class="product-item">
+								<div class="pi-pic">
+									<img src="./img/product/4.jpg" alt="">
+									<div class="pi-links">
+										<a href="#/" class="add-card"><i class="flaticon-bag"></i><span onclick="addtoCartNumber()"> AJOUTER AU PANIER</span></a>
+										<a href="#/" class="wishlist-btn"><i class="flaticon-heart"></i></a>
+									</div>
+								</div>
+								<div class="pi-text">
+									<h6>59,000Dt</h6>
+									<p>T-Shirt Homme Vegeta</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-4 col-sm-6">
+							<div class="product-item">
+								<div class="pi-pic">
+									<img src="./img/product/5.jpg" alt="">
+									<div class="pi-links">
+										<a href="#/" class="add-card"><i class="flaticon-bag"></i><span onclick="addtoCartNumber()">AJOUTER AU PANIER</span></a>
+										<a href="#/" class="wishlist-btn"><i class="flaticon-heart"></i></a>
+									</div>
+								</div>
+								<div class="pi-text">
+									<h6>39,000Dt</h6>
+									<p>Pull Homme OpenMinded</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-4 col-sm-6">
+							<div class="product-item">
+								<div class="pi-pic">
+									<img src="./img/product/6.jpg" alt="">
+									<div class="pi-links">
+										<a href="#/" class="add-card"><i class="flaticon-bag"></i><span onclick="addtoCartNumber()">AJOUTER AU PANIER</span></a>
+										<a href="#/" class="wishlist-btn"><i class="flaticon-heart"></i></a>
+									</div>
+								</div>
+								<div class="pi-text">
+									<h6>45,000Dt</h6>
+									<p>Robe courte à encolure en V </p>
+								</div>
+							</div>
+						</div>
+						
+						<div class="text-center w-100 pt-3">
+							<button class="site-btn sb-line sb-dark">Afficher Plus</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- Section de Categorie Fin  -->
+
+
+<!-- Footer Début -->
+<section class="footer-section">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-3 col-sm-6">
+				<div class="footer-widget about-widget">
+					<h2>PAIEMENT</h2>
+					<p>Notre Platforme présente un systéme de paiement en ligne  a travers votre carte bancaire tunisienne d'une maniére sécurisée . </p>
+					<img src="img/cards.png" alt="">
+				</div>
+			</div>
+			<div class="col-lg-3 col-sm-6">
+				<div class="footer-widget about-widget">
+					<h2>Questions</h2>
+					<ul>
+						<li><a href="">Qui Sommes-nous ?</a></li>
+						<li><a href="">Suivis Colis</a></li>
+						<li><a href="">Retour Marchandises</a></li>
+						<li><a href="">Postuler Pour un travail ?</a></li>
+						<li><a href="">Livraison</a></li>
+						<li><a href="">Nos Partenaires </a></li>
+					</ul>
+					
+				</div>
+			</div>
+			<div class="col-lg-3 col-sm-6">
+				<div class="footer-widget about-widget">
+					<h2>Articles Fashion 2021</h2>
+					<div class="fw-latest-post-widget">
+						<div class="lp-item">
+							<div class="lp-thumb set-bg" data-setbg="img/blog-thumbs/1.jpg"></div>
+							<div class="lp-content">
+								<h6>Que Porter avec mon mask(Covid19) ?</h6>
+								<span>4/11/2021</span>
+								<a href="#/" class="readmore">Lire la suite</a>
+							</div>
+						</div>
+						<div class="lp-item">
+							<div class="lp-thumb set-bg" data-setbg="img/blog-thumbs/2.jpg"></div>
+							<div class="lp-content">
+								<h6>Populaire Cet Année</h6>
+								<span>4/11/2021</span>
+								<a href="#/" class="readmore">Lire la suite</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-3 col-sm-6">
+				<div class="footer-widget contact-widget">
+					<h2>Informations Utiles</h2>
+					<div class="con-info">
+						<span>Sociéte.</span>
+						<p>BouhaShop - IIT SFAX  </p>
+					</div>
+					<div class="con-info">
+						<span>Addresse</span>
+						<p>Route Sokra KM 1 , 3052 </p>
+					</div>
+					<div class="con-info">
+						<span>Téléphone.</span>
+						<p>+00216 29512432</p>
+					</div>
+					<div class="con-info">
+						<span>Email.</span>
+						<p>ihebbouhamediit@gmail.com</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+<!-- Font Awesome  -->
+<div class="social-links-warp">
+		<div class="container">
+			<center>
+			<div class="social-links">
+				<a href="" class="instagram"><i class="fa fa-instagram"></i><span>instagram</span></a>
+				<a href="" class="facebook"><i class="fa fa-facebook"></i><span>facebook</span></a>
+				<a href="" class="twitter"><i class="fa fa-twitter"></i><span>twitter</span></a>
+				<a href="" class="youtube"><i class="fa fa-youtube"></i><span>youtube</span></a>
+			</div>
+		</center>
+
+
+<!-- Copyright avec JS - - Année En Cours  -->
+<p class="text-white text-center mt-5">Copyright &copy; <script>document.write(new Date().getFullYear());</script> All rights reserved | BouhaShop &copy; <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://www.facebook.com/iheb.bouhamed.359/" target="_blank">Bouhamed Iheb - IIT SFAX</a></p>
+
+
+		</div>
+	</div>
+</section>
+<!-- Footer Fin  -->
+
+
+
+<!--====== Import Javascripts & Jquery ======-->
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.slicknav.min.js"></script>
+<script src="js/owl.carousel.min.js"></script>
+<script src="js/jquery.nicescroll.min.js"></script>
+<script src="js/jquery.zoom.min.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<script src="js/main.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Panier  - BouhaShop | eCommerce Web Exercice </title>
+	<meta charset="UTF-8">
+	<meta name="description" content=" BouhaShop | eCommerce Web Exercice">
+	<meta name="keywords" content="BouhaShop | eCommerce Web Exercice">
+	<!-- Responsive Bootstrap-->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- Favicon -->
+	<link href="img/favicon.ico" rel="shortcut icon"/>    
+	<!-- Google Font -->
+	<link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,300i,400,400i,700,700i" rel="stylesheet">
+
+
+	<!-- Stylesheets -->
+	<link rel="stylesheet" href="css/bootstrap.min.css"/>
+	<link rel="stylesheet" href="css/font-awesome.min.css"/>
+	<link rel="stylesheet" href="css/flaticon.css"/>
+	<link rel="stylesheet" href="css/slicknav.min.css"/>
+	<link rel="stylesheet" href="css/jquery-ui.min.css"/>
+	<link rel="stylesheet" href="css/owl.carousel.min.css"/>
+	<link rel="stylesheet" href="css/animate.css"/>
+	<link rel="stylesheet" href="css/style.css"/>
+
+
+
+
+</head>
+<body>
+	<!-- Header Début -->
+	<header class="header-section">
+		<div class="header-top">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-2 text-center text-lg-left">
+						<!-- logo -->
+						<a href="./home.html" class="site-logo">
+							<img src="img/logo.png" alt="">
+						</a>
+					</div>
+					<div class="col-xl-6 col-lg-5">
+						<form class="header-search-form">
+							<input type="text" placeholder="Search on BouhaShop ....">
+							<button><i class="flaticon-search"></i></button>
+						</form>
+					</div>
+					<div class="col-xl-4 col-lg-6">
+						<div class="user-panel">
+							<div class="up-item">
+								<i class="flaticon-profile"></i>
+								<a href="Login.html">Identifiez</a>  ou <a href="Login.html">Creer un compte</a>
+							</div>
+							<div class="up-item">
+								<div class="shopping-card">
+									<i class="flaticon-bag"></i>
+									<span id="cartCount">0</span>
+								</div>
+								<a href="panierjs.html">Votre Panier</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+		<nav class="main-navbar">
+			<div class="container">
+				<!-- menu -->
+				<ul class="main-menu">
+					<li><a href="index.html">Acceuil</a></li>
+					<li><a href="femme.html">Femme</a></li>
+					<li><a href="homme.html">Homme</a></li>
+					<li><a href="" onclick="alert('En cours !!')">Enfant</a></li>
+					<li><a href="#/">Chaussures</a>
+						<ul class="sub-menu">
+							<li><a href="#/" onclick="alert('En cours !!')" >Espadries</a></li>
+							<li><a href="#/" onclick="alert('En cours !!')" >Sandals</a></li>
+							<li><a href="#/" onclick="alert('En cours !!')">Bottes</a></li>
+							
+						</ul>
+					</li>
+					<li><a href="#/">Aide Shopping !</a>
+						<ul class="sub-menu">
+							<li><a href="categorie.html">Recherche Détaillée </a></li>
+						</ul>
+					</li>
+					<li><a href="contact.html">Contact</a></li>
+				</ul>
+			</div>
+		</nav>
+	</header>
+	<!-- Header Fin -->
+
+
+    <!-- Page info debut-->
+	<div class="page-top-info">
+		<div class="container">
+			<h4>VOTRE PANIER</h4>
+			<div class="site-pagination">
+				<a href="index.html">Acceuil</a> / 
+				<a href="panierjs.html">Panier</a> 
+			</div>
+		</div>
+	</div>
+	<!-- Page info fin -->
+<div class="container align-content-md-center">
+    <label> Choississez Vos Achat :</label>
+    <select id="shopList" onlick="summ()" class="form-select form-select-lg mb-3">
+        <option selected disabled="disabled"> Liste Des Produits</option>
+        <optgroup label="Femme">
+        <option value="40" name="PullVegeta2"> Top Femme Colle V
+        </optgroup>    
+        <optgroup label="Homme">
+            <option value="35" name="PullVegeta3">Pull Homme OpenMinded
+            <option value="30" name="PullVegeta">Pull Homme Vegeta
+
+        </optgroup>    
+    </select>
+
+
+    <input type="text" id="qte" placeholder="Quantité" onkeyup="emptyQte()" onkeypress="return (event.charCode == 8 || event.charCode == 0) ? null : event.charCode >= 48 && event.charCode <= 57" required/>
+    <input type="button" value="Ajouter" id="ajout" disabled>
+    
+    <table id="sellTable"class="table">
+        <thead>
+          <tr>
+            <th scope="col">Nom Produit</th>
+            <th scope="col">Quantité</th>
+            <th scope="col">Prix Unitaire</th>
+            <th scope="col">Total Produit</th>
+			<th scope="col">Action</th>
+          </tr>
+        </thead>
+        <tbody>
+        </tbody>
+
+		<tfooter>
+			<td colspan="3">Somme Total : </td>
+			<td id="totalprod"> </td>
+			<td> <button>Paiement</button></td>
+		</tfooter>
+      </table>
+    </div>      
+     <script src='https://code.jquery.com/jquery-3.4.1.min.js'></script>
+     <script src='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js'></script>
+     <script  src="./js/script.js"></script>
+
+	<!-- Footer section Debut -->
+	<section class="footer-section">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-3 col-sm-6">
+					<div class="footer-widget about-widget">
+						<h2>PAIEMENT</h2>
+						<p>Notre Platforme présente un systéme de paiement en ligne  a travers votre carte bancaire tunisienne d'une maniére sécurisée . </p>
+						<img src="img/cards.png" alt="">
+					</div>
+				</div>
+				<div class="col-lg-3 col-sm-6">
+					<div class="footer-widget about-widget">
+						<h2>Questions</h2>
+						<ul>
+							<li><a href="#/">Qui Sommes-nous ?</a></li>
+							<li><a href="#/">Suivis Colis</a></li>
+							<li><a href="#/">Retour Marchandises</a></li>
+							<li><a href="#/">Postuler Pour un travail ?</a></li>
+							<li><a href="#/">Livraison</a></li>
+							<li><a href="#/">Nos Partenaires </a></li>
+						</ul>
+						
+					</div>
+				</div>
+				<div class="col-lg-3 col-sm-6">
+					<div class="footer-widget about-widget">
+						<h2>Articles Fashion 2021</h2>
+						<div class="fw-latest-post-widget">
+							<div class="lp-item">
+								<div class="lp-thumb set-bg" data-setbg="img/blog-thumbs/1.jpg"></div>
+								<div class="lp-content">
+									<h6>Que Porter avec mon mask(Covid19) ?</h6>
+									<span>4/11/2021</span>
+									<a href="#/" class="readmore">Lire la suite</a>
+								</div>
+							</div>
+							<div class="lp-item">
+								<div class="lp-thumb set-bg" data-setbg="img/blog-thumbs/2.jpg"></div>
+								<div class="lp-content">
+									<h6>Populaire Cet Année</h6>
+									<span>4/11/2021</span>
+									<a href="#/" class="readmore">Lire la suite</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-3 col-sm-6">
+					<div class="footer-widget contact-widget">
+						<h2>Informations Utiles</h2>
+						<div class="con-info">
+							<span>Sociéte.</span>
+							<p>BouhaShop - IIT SFAX  </p>
+						</div>
+						<div class="con-info">
+							<span>Addresse</span>
+							<p>Route Sokra KM 1 , 3052 </p>
+						</div>
+						<div class="con-info">
+							<span>Téléphone.</span>
+							<p>+00216 29512432</p>
+						</div>
+						<div class="con-info">
+							<span>Email.</span>
+							<p>ihebbouhamediit@gmail.com</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Font Awesome -->
+		<div class="social-links-warp">
+			<div class="container">
+				<center>
+				<div class="social-links">
+					<a href="https://www.instagram.com/iheb__bouhamed" class="instagram"><i class="fa fa-instagram"></i><span>instagram</span></a>
+					<a href="" class="facebook"><i class="fa fa-facebook"></i><span>facebook</span></a>
+					<a href="" class="twitter"><i class="fa fa-twitter"></i><span>twitter</span></a>
+					<a href="" class="youtube"><i class="fa fa-youtube"></i><span>youtube</span></a>
+				</div>
+			</center>
+
+
+<!-- Copyright avec JS -- Année En Cours  -->
+<p class="text-white text-center mt-5">Copyright &copy; <script>document.write(new Date().getFullYear());</script> All rights reserved | BouhaShop &copy; <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://www.facebook.com/iheb.bouhamed.359/" target="_blank">Bouhamed Iheb - IIT SFAX</a></p>
+			</div>
+		</div>
+	</section>
+	<!-- Footer Fin -->
+
+
+<!--====== Import Javascripts & Jquery ======-->
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.slicknav.min.js"></script>
+<script src="js/owl.carousel.min.js"></script>
+<script src="js/jquery.nicescroll.min.js"></script>
+<script src="js/jquery.zoom.min.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<script src="js/main.js"></script>
+<script src="js/script.js"></script>
+</body>
+
+
+
+</html>
+    
